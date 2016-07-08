@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head></head>
+    <body>
+        <script src="UrlPlugin.js"></script>
+        <script>
+            var surl = location.href;
+            var rstr = /\w+\.html/.exec(surl);
+            var fstr = surl.split("/").pop().split('?')[0].split('#')[0];
+            var root = [location.protocol,'//',location.host].join('');
+            var ar = [
+                '原來網址',
+                '<input type="text" value="'+ surl +'"/>',
+                'protocol',
+                '<input type="text" value="'+ location.protocol +'"/>',
+                'hostname',
+                '<input type="text" value="'+ location.host +'"/>',
+                'port',
+                '<input type="text" value="'+ location.port +'"/>',
+                'search',
+                '<input type="text" value="'+ location.search +'"/>',
+                'hash',
+                '<input type="text" value="'+ location.hash +'"/>',
+                '------------------------------------------------',
+                'fileName :: 正規表示法',
+                '<input type="text" value="'+ rstr +'"/>',
+                'fileName :: js function',
+                '<input type="text" value="'+ fstr +'"/>',
+                '------------------------------------------------',
+                'root',
+                '<input type="text" value="'+ root +'"/>',
+                'first-folder',
+                '<input type="text" value="'+ surl.split("//")[1].split("/")[1].toString() +'"/>',
+                'second-folder',
+                '<input type="text" value="'+ surl.split("//")[1].split("/")[2].toString() +'"/>',
+                'thrid-folder',
+                '<input type="text" value="'+ surl.split("//")[1].split("/")[3].toString() +'"/>',
+                '????',
+                '<input type="text" value="'+ location.sec[2] +'"/>',
+            ];
+            document.write(ar.join("<br /><br />"));
+
+        </script>
+        <style>
+            input{
+                font-size: 30px;
+                width: 800px;
+            }
+        </style>
+    </body>
+</html>
