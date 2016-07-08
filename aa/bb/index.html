@@ -35,16 +35,25 @@
                 '<input type="text" value="'+ surl.split("//")[1].split("/")[2].toString() +'"/>',
                 'thrid-folder',
                 '<input type="text" value="'+ surl.split("//")[1].split("/")[3].toString() +'"/>',
-                '????',
+                'folder',
                 '<input type="text" value="'+ location.sec[2] +'"/>',
+                'params',
+                '<input type="text" value="'+ location.params.s +'"/>',
+                'hashs',
+                '<input type="text" value="'+ location.hashs.postID +'"/>',
             ];
-            document.write(ar.join("<br /><br />"));
+            document.write(ar.join("<br />"));
 
         </script>
         <style>
+            body{
+                font-size: 14px;
+            }
             input{
-                font-size: 30px;
+                font-size: 14px;
                 width: 800px;
+                margin-top: 10px;
+                margin-bottom: 14px;
             }
         </style>
     </body>
